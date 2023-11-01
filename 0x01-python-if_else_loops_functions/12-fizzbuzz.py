@@ -7,20 +7,20 @@ def fizzbuzz():
         buzz = i % 5
         if i < 100:
             if fizz == 0 and buzz != 0:
-                print("fizz", end=' ')
+                print("Fizz", end=' ')
             elif buzz == 0 and fizz != 0:
-                print("buzz", end=' ')
+                print("Buzz", end=' ')
             elif fizz == 0 and buzz == 0:
-                print("fizzbuzz", end=' ')
+                print("FizzBuzz", end=' ')
             else:
                 print(i, end=' ')
         else:
             if fizz == 0 and buzz != 0:
-                print("fizz", end='')
+                print("Fizz", end='')
             elif buzz == 0 and fizz != 0:
-                print("buzz", end='')
+                print("Buzz", end='')
             elif fizz == 0 and buzz == 0:
-                print("fizzbuzz", end='')
+                print("Fizzbuzz", end='')
             else:
                 print(i, end='')
     return i
