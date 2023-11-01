@@ -13,4 +13,4 @@ def fizzbuzz():
             print("FizzBuzz", end=' ')
         else:
             print(i, end=' ')
-    return i   
+    return i
