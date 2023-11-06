@@ -8,7 +8,6 @@ if __name__ == "__main__":
     # if no argument was passed
     if argv_count == 0:
         print("{:d} arguments.".format(argv_count))
-        
     # if exactly one argument was passed
     elif argv_count == 1:
         print(f"{argv_count} argument:")
