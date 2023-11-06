@@ -10,3 +10,6 @@ Files to create
 - 5-no_c.py
 - 6-print_matrix_integer.py
 - 7-add_tuple.py
+- 8-multiple_returns.py
+- 9-max_integer.py
+- 10-divisible_by_2.py
