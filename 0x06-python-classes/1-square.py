@@ -6,10 +6,10 @@
 
 class Square:
     
-    """ A class Square that defines a Square with a private size attribute
+    """ A class Square with a private size attribute
 
-    Attributes: 
-              __size (int)
+    Attributes:
+        __size (int)
 
     """
     def __init__(self, size):
@@ -17,7 +17,7 @@ class Square:
         """Initializing the class
 
         Args: 
-             size (int): size of the square
+            size (int): size of the square
 
         Return: None
 
