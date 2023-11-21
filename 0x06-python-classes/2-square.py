@@ -10,10 +10,14 @@ class Square:
 
     """
     def __init__(self, size=0):
-        """Instantiation with optional size
-
+        """
         Args:
             size (int): size of the square
+        Returns:
+            None
+        Raises:
+            ValueError: If 'size' is less than 0
+            TypeError: If 'size' is not an integer
         """
         if size < 0:
             raise ValueError("size must be >= 0")
