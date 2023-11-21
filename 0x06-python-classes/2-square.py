@@ -3,8 +3,8 @@
 
 
 class Square:
-    """A class square with private instance variable
-
+    """
+    class square with private instance variable
     Attributes:
         __size (int): size of the square
 

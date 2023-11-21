@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+
 """Defining a Square"""
 
 
 class Square:
-    """A class square with private instance variable
-
+    """
+    A class square with private instance variable
     Attributes:
         __size (int): size of the square
     Method:
@@ -29,12 +30,12 @@ class Square:
         else:
             raise TypeError("size must be an integer")
     def area(self):
-        """defines the area of the square
+        """
+        defines the area of the square
         Args:
             None
         Returns:
-            int: integer value
-            the squared value of __size
+            int: the squared value of __size
         """
         result = self.__size ** 2
         return result
