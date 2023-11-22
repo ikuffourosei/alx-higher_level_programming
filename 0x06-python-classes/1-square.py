@@ -6,7 +6,7 @@
 
 class Square:
     
-    """ A class Square with a private size attribute
+    """Square class
 
     Attributes:
         __size (int): size of the square

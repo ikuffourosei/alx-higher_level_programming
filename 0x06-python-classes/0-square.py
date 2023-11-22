@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-""" An empty class that defines a square"""
+"""Defining a square"""
 
 
 class Square:

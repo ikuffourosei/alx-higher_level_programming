@@ -3,14 +3,14 @@
 
 
 class Square:
-    """
-    class square with private instance variable
+    """Square class
     Attributes:
         __size (int): size of the square
 
     """
     def __init__(self, size=0):
         """
+        initializing the square
         Args:
             size (int): size of the square
         Returns:
