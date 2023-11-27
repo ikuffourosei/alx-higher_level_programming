@@ -69,13 +69,13 @@ Addition with a non-float and non-integer:
 	>>> add_integer("hello", 2)
 	Traceback (most recent call last):
 	...
-	TypeError: a must be an intger
+	TypeError: a must be an integer
 
 Addition with a non-float and non-integer:
 	>>> add_integer([x for x in range(5)], 4)
 	Traceback (most recent call last):
 	...
-	TypeError: a must be an intger
+	TypeError: a must be an integer
 
 Addition with a non-float and non-integer:
 	>>> add_integer((2), {1: "2"})
