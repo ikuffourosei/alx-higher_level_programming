@@ -1,5 +1,13 @@
 #!/usr/bin/python3
-l1 = [1, 2, 3]
-l2 = l1
-l1 = l1 + [4]
-print(l1)
+copy_list = __import__('19-copy_list').copy_list
+
+my_list = [1, 2, 3]
+print(my_list)
+
+new_list = copy_list(my_list)
+
+print(my_list)
+print(new_list)
+
+print(new_list == my_list)
+print(new_list is my_list)
