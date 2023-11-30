@@ -1,4 +1,40 @@
 The ''3-say_my_name'' module
 ============================
 
-Using 
+Using ''say_my_name''
+---------------------
+
+Importing the module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Checking the module docstring:
+	>>> m_d = __import__('3-say_my_name').__doc__
+	>>> len(m_d) > 1
+	True
+
+Checking the function docstring:
+	>>> f_d = __import__('3-say_my_name').say_my_name.__doc__
+	>>> len(f_d) > 1
+	True
+
+Regular check:
+	>>> first_name = "Ivan"
+	>>> last_name = "Rodri"
+	>>> print(say_my_name(first_name, last_name))
+	My name is Ivan Rodri
+
+A string and an integer:
+	>>> first_name = "Ivan"
+	>>> last_name = 77
+	>>> print(say_my_name(first_name, last_name))
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+A list and a list:
+	>>> first_name = {"Ivan"}
+	>>> last_name = {77, 12, 40}
+	>>> print(say_my_name(first_name, last_name))
+        Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
