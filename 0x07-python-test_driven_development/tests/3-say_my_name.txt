@@ -38,3 +38,25 @@ A list and a list:
         Traceback (most recent call last):
 	...
 	TypeError: first_name must be a string
+
+A float and a string:
+	>>> first_name = 1.25
+	>>> last_name = "Rodri"
+	>>> print(say_my_name(first_name, last_name))
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+An empty string and a string:
+	>>> first_name = ""
+	>>> last_name = "Rodri"
+	>>> print(say_my_name(first_name, last_name))
+	My name is  Rodri
+
+Boolean values:
+	>>> first_name = True
+	>>> last_name = True
+	>>> print(say_my_name(first_name, last_name))
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
