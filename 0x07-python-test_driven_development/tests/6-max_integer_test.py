@@ -11,8 +11,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([-2, -4, -7]), -2)
         self.assertEqual(max_integer([0]), 0)
-        self.assertIsInstance([1, 3, 5], list)
-        self.assertNotEqual([1, 5, 3], 1)
         self.assertRaises(TypeError, max_integer, dict)
         self.assertRaises(TypeError, max_integer, tuple)
         self.assertRaises(TypeError, max_integer, set)
