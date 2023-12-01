@@ -27,7 +27,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, str)
         self.assertRaises(TypeError, max_integer, bool)
 
-        #Testing with list containing different data type
+    def test_max_integer(self):
+        """Testing with list containing different data type
+        """
         mixed = ["1", 77, True]
         with self.assertRaises(TypeError):
             max_integer(mixed)
