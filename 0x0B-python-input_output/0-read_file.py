@@ -1,9 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 
-"""The read file module
-Reads a file
+"""The ''read_file''
 """
-def read_file(filename=""):
+def read_file(filename=''):
     with open(filename, 'r', encoding='UTF-8') as rf:
-        file_read = rf.read()
-    return file_read
+        print(rf.read())
+    
