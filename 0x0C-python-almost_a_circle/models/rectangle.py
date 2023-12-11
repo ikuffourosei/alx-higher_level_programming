@@ -24,7 +24,7 @@ class Rectangle(Base):
             id (int): id of the rectangle
         Raise:
             TypeError: if width, heigth, x, or y is not int
-            ValueError: if width and height <= 0, if x and y < 0
+            ValueError: if width and height <= 0 OR if x and y < 0
         """
         self.__width = width
         self.__height = height
