@@ -87,22 +87,23 @@ class Rectangle(Base):
     def area(self):
         """calculates and returns the area of the rectangle"""
         return self.width * self.height
-    
+
     def display(self):
         """Print the Rectangle using the `#` character."""
         if self.height == 0 or self.width == 0:
             print("")
             return
-        
+
         for y in range(self.y):
             print()
         for h in range(self.height):
             print(" " * self.x + "#" * self.width)
-    
+
     def __str__(self):
         """overriding the '__str__'method"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-    
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/\
+{self.height}"
+
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute
 
@@ -127,7 +128,7 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
-        
+
         else:
             for key, value in kwargs.items():
                 if key == "id":
