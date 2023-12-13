@@ -103,7 +103,7 @@ class Rectangle(Base):
         """overriding the '__str__'method"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute
 
         1st argument should be the 'id' attribute
@@ -111,8 +111,12 @@ class Rectangle(Base):
         3rd argument should be the 'height' attribute
         4th argument should be the 'x' attribute
         5th argument should be the 'y' attribute
+
+        Args:
+            *args (list): positional arguments
+            **kwargs (dict): key-worded arguments
         """
-        if len(args) != 0:
+        if args and len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -123,3 +127,16 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
+        
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
