@@ -44,7 +44,7 @@ class Square(Rectangle):
             *args (list): positional arguments
             **kwargs (dict): key-worded arguments
         """
-        if args and len(args) > 0:
+        if args and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
@@ -53,7 +53,7 @@ class Square(Rectangle):
                 self.x = args[2]
             if len(args) >= 4:
                 self.y = args[3]
-        else:
+        elif kwargs and len(kwargs) != 0:
             for key, val in kwargs.items():
                 if key == "id":
                     self.id = val
