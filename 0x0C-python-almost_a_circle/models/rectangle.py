@@ -141,3 +141,11 @@ class Rectangle(Base):
                     self.width = value
                 if key == "height":
                     self.height = value
+    def to_dictionary(self):
+        dict_rect = dict()
+        dict_rect["x"] = self.x
+        dict_rect["y"] = self.y
+        dict_rect["id"] = self.id
+        dict_rect["height"] = self.height
+        dict_rect["width"] = self.width
+        return dict_rect
