@@ -141,6 +141,7 @@ class Rectangle(Base):
                     self.width = value
                 if key == "height":
                     self.height = value
+
     def to_dictionary(self):
         dict_rect = dict()
         dict_rect["x"] = self.x

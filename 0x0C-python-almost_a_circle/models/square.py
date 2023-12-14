@@ -58,7 +58,7 @@ class Square(Rectangle):
                 if key == "id":
                     self.id = val
                 if key == "size":
-                    self.size =  val
+                    self.size = val
                 if key == "x":
                     self.x = val
                 if key == "y":
