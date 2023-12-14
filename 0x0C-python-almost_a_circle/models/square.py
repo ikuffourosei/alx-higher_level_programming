@@ -63,3 +63,12 @@ class Square(Rectangle):
                     self.x = val
                 if key == "y":
                     self.y = val
+    
+    def to_dictionary(self):
+        """Returns a dictionary of all argument"""
+        dict_square = dict()
+        dict_square["id"] = self.id
+        dict_square["x"] = self.x
+        dict_square["size"] = self.size
+        dict_square["y"] = self.y
+        return dict_square
