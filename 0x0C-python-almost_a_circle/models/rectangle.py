@@ -101,8 +101,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """overriding the '__str__'method"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/\
-{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute
@@ -143,6 +142,7 @@ class Rectangle(Base):
                     self.height = value
 
     def to_dictionary(self):
+        """Returns the dictionary format of all arguments"""
         dict_rect = dict()
         dict_rect["x"] = self.x
         dict_rect["y"] = self.y
