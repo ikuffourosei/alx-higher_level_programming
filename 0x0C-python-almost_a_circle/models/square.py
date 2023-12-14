@@ -63,7 +63,7 @@ class Square(Rectangle):
                     self.x = val
                 if key == "y":
                     self.y = val
-    
+
     def to_dictionary(self):
         """Returns a dictionary of all argument"""
         dict_square = dict()
