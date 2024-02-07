@@ -1,2 +1,2 @@
--- 
-SELECT *
+-- show databases  
+SHOW DATABASES;
