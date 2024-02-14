@@ -9,6 +9,6 @@ if (arg.length <= 3) {
   for (let index = 2; index < arg.length; index++) {
     newList.push(arg[index]);
   }
-  newList = newList.sort().reverse();
+  newList = newList.sort().reverse().map(Number);
   console.log(newList[1]);
 }
