@@ -2,6 +2,7 @@
 import MySQLdb
 import sys
 
+
 def execution():
     """Function to execute the query
     Creates a connection to the base, executes the query, closes the cursor
@@ -10,8 +11,9 @@ def execution():
     if len(sys.argv) == 4:
         arg = sys.argv
         username, password, database = arg[1:]
-        #creating a connection to a database called hbtn_0e_0_usa
-        db = MySQLdb.Connect(password=password, user=username, database=database)
+        # creating a connection to a database called hbtn_0e_0_usa
+        db = MySQLdb.Connect(password=password,
+                             user=username, database=database)
 
         # cursor
         try:
@@ -31,6 +33,7 @@ def execution():
     else:
         print("Usage: <python script> username, password, database")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     execution()
