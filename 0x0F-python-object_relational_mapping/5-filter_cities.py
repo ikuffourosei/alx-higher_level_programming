@@ -24,9 +24,11 @@ def connection():
             else:
                 raise
         if allCites:
+            # get the result as a list
             result = []
             for items in allCites:
                 result.append(items[0])
+            # show results separated with comma
             print(", ".join(result))
         else:
             print("\n")
