@@ -13,8 +13,8 @@ def connection():
                              database=database)
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
-                    WHERE name=%s
-                    ORDER BY id""", (name,))
+                    WHERE name='{}'
+                    ORDER BY id""".format(name))
         user_select = cur.fetchone()
         print(str(user_select))
     else:
