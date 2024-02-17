@@ -12,9 +12,11 @@ def connection():
         db = MySQLdb.connect(user=username, password=password,
                              database=database)
         cur = db.cursor()
+
+        # executing using safe query parameter
         cur.execute("""SELECT * FROM states
-                    WHERE name='{}'
-                    ORDER BY id""".format(name))
+                    WHERE name=%(name)s
+                    ORDER BY id""", {'name': name})
         user_select = cur.fetchone()
         if user_select:
             print(str(user_select))
