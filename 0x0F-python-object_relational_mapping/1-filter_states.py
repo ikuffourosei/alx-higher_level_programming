@@ -11,8 +11,8 @@ def connection():
     """
     if len(cli) == 4:
         username, password, database = cli[1:]
-        db = MySQLdb.connect(user=username, password=password,
-                             database=database)
+        db = MySQLdb.connect(host='localhost', port=3306, user=username,
+                             password=password, database=database)
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
                     WHERE name LIKE 'N%'
