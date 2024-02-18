@@ -20,9 +20,9 @@ def connection():
         cur = db.cursor()
         cur.execute("""SELECT * FROM states WHERE name LIKE
                     '{:s}' ORDER BY id ASC""".format(name))
-        user_select = cur.fetchone()
+        user_select = cur.fetchall()
         if user_select:
-            print(user_select)
+            print(user_select[0])
         else:
             print(f"'{name}' not found in state")
     else:
