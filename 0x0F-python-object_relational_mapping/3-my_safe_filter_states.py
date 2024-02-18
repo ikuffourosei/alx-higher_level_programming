@@ -25,7 +25,7 @@ def connection():
         cur.execute("""SELECT * FROM states
                     WHERE name LIKE %(name)s
                     ORDER BY id ASC""", {'name': name})
-        user_select = cur.fetchone()
+        user_select = cur.fetchall()
         for items in user_select:
             print(items)
     else:
