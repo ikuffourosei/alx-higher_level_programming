@@ -8,7 +8,7 @@ cli = sys.argv
 def connection():
     if len(cli) == 4:
         username, password, database = cli[1:]
-        db = MySQLdb.connect(host='localhost', port=3306, user=username,
+        db = MySQLdb.connect(port=3306, user=username, host='localhost',
                             password=password, database=database)
         try:
             cur = db.cursor()

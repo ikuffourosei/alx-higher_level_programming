@@ -7,7 +7,7 @@ cli = sys.argv
 
 def connection():
     """Function that executes a query by filter names of state
-    that begins with N
+    that begins with 'N'
     """
     if len(cli) == 4:
         username, password, database = cli[1:]
