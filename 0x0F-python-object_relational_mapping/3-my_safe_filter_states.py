@@ -26,10 +26,8 @@ def connection():
                     WHERE name LIKE %(name)s
                     ORDER BY id ASC""", {'name': name})
         user_select = cur.fetchone()
-        if user_select:
-            print(user_select)
-        else:
-            print(f"'{name}' not found in state")
+        for items in user_select:
+            print(items)
     else:
         print("\n").join(["Add input value of the name of state to search for",
                           "Usage: <python script> username, password, database"
