@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+'''
+a script that lists all states
+from the database
+'''
 
 
 import sys
 import MySQLdb
 
-'''
-a script that lists all states
-from the database
-'''
+
 def connection():
     cli = sys.argv
     if len(cli) == 5:
