@@ -24,15 +24,13 @@ def connection():
                     WHERE states.name=%(name)s
                     ORDER BY cities.id ASC""", {'name': name})
         allCites = cur.fetchall()
-        if allCites:
-            # get the result as a list
-            result = []
-            for items in allCites:
-                result.append(items[0])
-            # show results separated with comma
-            print(", ".join(result))
-        else:
-            print("\n")
+        # get the result as a list
+        result = []
+        for items in allCites:
+            result.append(items[0])
+        # show results separated with comma
+        print(", ".join(result))
+        
         # cleaning up
         cur.close()
         db.close()
