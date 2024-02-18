@@ -18,7 +18,7 @@ def connection():
                              password=password, database=database)
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
-                    WHERE name LIKE 'N%'
+                    WHERE name LIKE BINARY 'N%'
                     ORDER BY id ASC""")
         names = cur.fetchall()
         for items in names:
