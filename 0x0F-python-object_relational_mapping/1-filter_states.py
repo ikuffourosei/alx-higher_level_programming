@@ -12,9 +12,8 @@ def connection():
     """Function that executes a query by filter names of state
     that begins with 'N'
     """
-    cli = sys.argv
-    if len(cli) == 4:
-        username, password, database = cli[1:]
+    if len(sys.argv) == 4:
+        username, password, database = sys.argv[1:]
         db = MySQLdb.connect(host='localhost', port=3306, user=username,
                              password=password, database=database)
         cur = db.cursor()
