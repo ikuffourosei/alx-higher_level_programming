@@ -22,7 +22,7 @@ def connection():
                     '{:s}' ORDER BY id ASC""".format(name))
         user_select = cur.fetchone()
         if user_select:
-            print(str(user_select))
+            print(user_select)
         else:
             print(f"'{name}' not found in state")
     else:

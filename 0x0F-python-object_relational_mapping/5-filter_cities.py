@@ -19,7 +19,7 @@ def connection():
 
         cur = db.cursor()
         cur.execute("""SELECT cities.name
-                    FROM cities JOIN states
+                    FROM cities LEFT JOIN states
                     ON cities.state_id=states.id
                     WHERE states.name=%(name)s
                     ORDER BY cities.id ASC""", {'name': name})
