@@ -16,19 +16,14 @@ def connection():
         username, password, database, name = cli[1:]
         db = MySQLdb.connect(port=3306, user=username, host="localhost",
                              password=password, database=database)
-        try:
-            cur = db.cursor()
-            cur.execute("""SELECT cities.name
-                        FROM cities JOIN states
-                        ON cities.state_id=states.id
-                        WHERE states.name=%(name)s
-                        ORDER BY cities.id ASC""", {'name': name})
-            allCites = cur.fetchall()
-        except MySQLdb.OperationalError as e:
-            if e[0] == 1060:
-                pass
-            else:
-                raise
+
+        cur = db.cursor()
+        cur.execute("""SELECT cities.name
+                    FROM cities JOIN states
+                    ON cities.state_id=states.id
+                    WHERE states.name=%(name)s
+                    ORDER BY cities.id ASC""", {'name': name})
+        allCites = cur.fetchall()
         if allCites:
             # get the result as a list
             result = []
