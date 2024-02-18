@@ -23,7 +23,7 @@ def connection():
 
         # executing using safe query parameter
         cur.execute("""SELECT * FROM states
-                    WHERE name=%(name)s
+                    WHERE name LIKE %(name)s
                     ORDER BY id ASC""", {'name': name})
         user_select = cur.fetchone()
         if user_select:
