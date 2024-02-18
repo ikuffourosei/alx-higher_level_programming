@@ -15,7 +15,8 @@ def connection():
     if len(cli) == 5:
         username, password, database, name = cli[1:]
         db = MySQLdb.connect(port=3306, user=username, host="localhost",
-                             password=password, database=database)
+                             password=password, database=database,
+                             charset='UTF-8')
 
         cur = db.cursor()
         cur.execute("""SELECT cities.name
