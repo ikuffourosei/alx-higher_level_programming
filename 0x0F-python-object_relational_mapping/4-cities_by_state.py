@@ -7,9 +7,9 @@ cli = sys.argv
 
 def connection():
     if len(cli) == 4:
-        username, password, databse = cli[1:]
-        db = MySQLdb.connect(user=username, password=password,
-                             database=databse)
+        username, password, database = cli[1:]
+        db = MySQLdb.connect(host='localhost', port=3306, user=username,
+                            password=password, database=database)
         try:
             cur = db.cursor()
             cur.execute("""SELECT cities.id, cities.name, states.name
