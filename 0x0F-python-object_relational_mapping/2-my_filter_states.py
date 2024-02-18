@@ -18,9 +18,8 @@ def connection():
         db = MySQLdb.connect(port=3306, user=username, host='localhost',
                              password=password, database=database)
         cur = db.cursor()
-        cur.execute("""SELECT * FROM states
-                    WHERE name='{}'
-                    ORDER BY id""".format(name))
+        cur.execute("""SELECT * FROM states WHERE name LIKE
+                    '{:s}' ORDER BY id ASC""".format(name))
         user_select = cur.fetchone()
         if user_select:
             print(str(user_select))

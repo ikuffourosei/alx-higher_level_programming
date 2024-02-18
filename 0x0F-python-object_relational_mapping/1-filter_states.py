@@ -19,7 +19,7 @@ def connection():
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
                     WHERE name LIKE 'N%'
-                    ORDER BY id""")
+                    ORDER BY id ASC""")
         names = cur.fetchall()
         for items in names:
             print(str(items))

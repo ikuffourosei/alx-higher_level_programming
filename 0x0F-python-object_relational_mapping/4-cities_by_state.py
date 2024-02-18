@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""a script that lists all cities from the database hbtn_0e_4_usa
+"""
+
+
 import sys
 import MySQLdb
 
 
-
 def connection():
+    """Function that lists all cities from the database hbtn_0e_4_usa
+    """
     cli = sys.argv
     if len(cli) == 4:
         username, password, database = cli[1:]
@@ -15,7 +20,7 @@ def connection():
             cur.execute("""SELECT cities.id, cities.name, states.name
                         FROM cities JOIN states
                         ON cities.state_id=states.id
-                        ORDER BY cities.id""")
+                        ORDER BY cities.id ASC""")
             allCites = cur.fetchall()
         except MySQLdb.OperationalError as e:
             if e[0] == 1060:

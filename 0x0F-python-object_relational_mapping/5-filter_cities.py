@@ -22,7 +22,7 @@ def connection():
                         FROM cities JOIN states
                         ON cities.state_id=states.id
                         WHERE states.name=%(name)s
-                        ORDER BY cities.id""", {'name': name})
+                        ORDER BY cities.id ASC""", {'name': name})
             allCites = cur.fetchall()
         except MySQLdb.OperationalError as e:
             if e[0] == 1060:
