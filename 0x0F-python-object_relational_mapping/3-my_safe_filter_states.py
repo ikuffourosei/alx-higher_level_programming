@@ -1,11 +1,19 @@
 #!/usr/bin/python3
+"""a script that takes in arguments and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument
+But this time, write one that is safe from MySQL injections!
+"""
+
+
 import MySQLdb
 import sys
 
-cli = sys.argv
-
 
 def connection():
+    """Displays all query results according to user input, safe from sql
+    injections
+    """
+    cli = sys.argv
     if len(cli) == 5:
         username, password, database, name = cli[1:]
 

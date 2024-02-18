@@ -1,11 +1,17 @@
 #!/usr/bin/python3
+""" a script that takes in an argument and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument
+"""
+
+
 import MySQLdb
 import sys
 
-cli = sys.argv
-
 
 def connection():
+    """Function that displays the result of a query where query is user input
+    """
+    cli = sys.argv
     if len(cli) == 5:
         username, password, database, name = cli[1:]
 

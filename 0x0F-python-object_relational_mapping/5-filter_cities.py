@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""a script that takes in the name of a state as an argument
+and lists all cities of that state, using the database hbtn_0e_4_usa
+"""
+
+
 import sys
 import MySQLdb
 
 
 def connection():
+    """Function that lists all cities of a state according to user input
+    """
     cli = sys.argv
     if len(cli) == 5:
         username, password, database, name = cli[1:]

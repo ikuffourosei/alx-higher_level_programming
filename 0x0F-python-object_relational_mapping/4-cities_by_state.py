@@ -2,14 +2,14 @@
 import sys
 import MySQLdb
 
-cli = sys.argv
 
 
 def connection():
+    cli = sys.argv
     if len(cli) == 4:
         username, password, database = cli[1:]
         db = MySQLdb.connect(port=3306, user=username, host='localhost',
-                            password=password, database=database)
+                             password=password, database=database)
         try:
             cur = db.cursor()
             cur.execute("""SELECT cities.id, cities.name, states.name
