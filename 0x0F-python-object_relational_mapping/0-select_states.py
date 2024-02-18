@@ -13,7 +13,9 @@ def execution():
         username, password, database = arg[1:]
         # creating a connection to a database called hbtn_0e_0_usa
         db = MySQLdb.Connect(password=password,
-                             user=username, database=database)
+                             user=username, database=database,
+                             host='localhost',
+                             port=3306)
 
         # cursor
         try:
