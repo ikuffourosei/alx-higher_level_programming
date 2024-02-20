@@ -30,7 +30,7 @@ def connection():
             result.append(items[0])
         # show results separated with comma
         print(", ".join(result))
-        
+
         # cleaning up
         cur.close()
         db.close()
