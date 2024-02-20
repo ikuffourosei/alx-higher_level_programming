@@ -13,11 +13,12 @@ from model_state import Base, State
 if __name__ == "__main__":
     username, passwd, dbs = argv[1:]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(username, passwd, dbs))
+                           .format(username, passwd, dbs),pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    a = session.query(State).order_by(State.id.asc()).filter(State.name.like('%a%'))
-    for rows in a:
+    result = session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id).all()
+    for rows in result:
         print(f"{rows.id}:{rows.name}")
     session.close()
