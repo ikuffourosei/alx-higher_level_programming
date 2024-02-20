@@ -13,7 +13,7 @@ from model_state import Base, State
 if __name__ == "__main__":
     username, passwd, dbs = argv[1:]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(username, passwd, dbs),pool_pre_ping=True)
+                           .format(username, passwd, dbs), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
