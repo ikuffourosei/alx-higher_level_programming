@@ -14,7 +14,10 @@ if __name__ == "__main__":
     username, passwd, dbs = sys.argv[1:]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(username, passwd, dbs))
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     for row in session.query(State).order_by(State.id):
         print(f"{row.id}: {row.name}")
+    session.close()
+    
