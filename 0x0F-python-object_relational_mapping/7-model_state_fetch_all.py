@@ -20,4 +20,3 @@ if __name__ == "__main__":
     for row in session.query(State).order_by(State.id):
         print(f"{row.id}: {row.name}")
     session.close()
-    
