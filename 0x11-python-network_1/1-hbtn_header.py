@@ -9,7 +9,7 @@ import urllib.request
 
 
 url = sys.argv[1]
-req = urllib.request.Request('{}'.format(url))
+req = urllib.request.Request(url)
 with urllib.request.urlopen(req) as page:
     resp = page.getheader('X-Request-Id')
     print(resp)
