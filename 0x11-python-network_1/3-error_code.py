@@ -6,12 +6,12 @@ import sys
 import urllib.request
 import urllib.error
 
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-url = sys.argv[1]
-
-request = urllib.request.Request(url)
-try:
-    with urllib.request.urlopen(request) as resp:
-        print(resp.read().decode("ascii"))
-except urllib.error.HTTPError as e:
-    print(f"Error code: {e.code}")
+    request = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(request) as resp:
+            print(resp.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print(f"Error code: {e.code}")
